@@ -1,14 +1,15 @@
 node {
     // init env vars
-    env.host = "example.com"
-    env.ok_status_code = "200"
+    env.HOST = "example.com"
+    env.OK_STATUS_CODE = "200"
     
     stage('validate_parameters') {
-        if (env.env_name =~ /^(ing|dev)$/) {
-            echo "The env_name value is valid!: ${env.env_name}"
-        } else {
-            error("The env_name parameter value is invalid. Must be 'ing' or 'dev'.")
-        }
+        //if (env.env_name =~ /^(ing|dev)$/) {
+        //    echo "The env_name value is valid!: ${env.env_name}"
+        //} else {
+            //error("The env_name parameter value is invalid. Must be 'ing' or 'dev'.")
+        //}
+        echo $HOST
     }
 
     stage('get_status') {
