@@ -1,6 +1,5 @@
 node {
     // init env vars
-    env.env_name = $env_name
     env.host = "example.com"
     env.ok_status_code = "200"
     
