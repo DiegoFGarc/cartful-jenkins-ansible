@@ -9,7 +9,7 @@ node {
         //} else {
             //error("The env_name parameter value is invalid. Must be 'ing' or 'dev'.")
         //}
-        echo $HOST
+        echo "Testing..."
     }
 
     stage('get_status') {
