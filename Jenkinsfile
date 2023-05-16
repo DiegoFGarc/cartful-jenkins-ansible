@@ -13,7 +13,7 @@ node {
 
     stage('get_status') {
         sh '''
-        echo "***********Getting status***********"
+        echo "***********Getting Status***********"
         ansible-playbook template.yml --extra-vars="env_name=staging"
     '''
     }
