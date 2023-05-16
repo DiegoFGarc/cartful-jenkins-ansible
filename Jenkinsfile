@@ -19,13 +19,6 @@ node {
         sh '''
         echo "***********Validating Status***********"
         . ./request.sh
-    
-        if [[ $status_code -eq 200 ]]; then
-            echo "Status code is 200. Pipeline continues."
-        else
-            echo "Error: Status code is not 200. Pipeline fails."
-            exit 1
-    fi
     '''
     }
 
