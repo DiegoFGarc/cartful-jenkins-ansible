@@ -2,8 +2,8 @@
   tasks:
     - name: Request
       template:
-        src: request.j2
-        dest: ./request.sh
+        src: cartful-jenkins-ansible/request.j2
+        dest: cartful-jenkins-ansible/request.sh
       tags: template
       register: template_output
     
