@@ -23,8 +23,8 @@ node {
     }
 
     stage('send_notification') {
-        echo "The variable env_name is: ${env.env_name}"
-        echo "The status code is: $status_code"
+        echo "The variable env_name is: ${env.env_name} and this returns status code 200"
+
     }    
 
 }
