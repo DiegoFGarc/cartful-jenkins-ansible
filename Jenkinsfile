@@ -14,7 +14,7 @@ node {
     stage('get_status') {
         sh '''
         echo "***********Getting Status***********"
-        ansible-playbook cartful-jenkins-ansible/template.yml --extra-vars="env_name=staging"
+        ansible-playbook template.yml --extra-vars="env_name=staging"
         '''
     }
 
