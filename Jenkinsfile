@@ -1,7 +1,4 @@
 node {
-    // init env vars
-    env.HOST = "example.com"
-    env.OK_STATUS_CODE = "200"
     
     stage('validate_parameters') {
         if (env.env_name.contains('ing') || env.env_name.contains('dev')) {
@@ -33,7 +30,8 @@ node {
     }
 
     stage('send_notification') {
-        echo "The status code is: ${env.ok_status_code}"
+        echo "The variable env_name is: ${env.env_name}"
+        echo "The status code is: $status_code"
     }    
 
 }
