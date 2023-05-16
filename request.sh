@@ -1,7 +1,7 @@
 #!/bin/bash
 
 base_url="https://api-env.cartfulsolutions.com"
-environment="{{ env_name }}"
+environment="staging"
 url="$base_url/$environment/status"
 
 response=$(curl -s -w "%{http_code}" "$url")

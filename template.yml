@@ -7,5 +7,5 @@
       tags: template
       register: template_output
     
-    - debug: var=template_output.stdout
+    - debug: var=template_output
 
