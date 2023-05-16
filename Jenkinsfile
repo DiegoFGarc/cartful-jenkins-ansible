@@ -14,6 +14,7 @@ node {
     stage('get_status') {
         sh '''
         echo "***********Getting Status***********"
+        echo ${env.env_name}
         ansible-playbook template.yml --extra-vars="env_name=${env.env_name}"
         '''
     }
