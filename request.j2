@@ -11,3 +11,4 @@ status_code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
 
 echo "Server response status code:"
 echo $status_code
+echo "$status_code" > status.txt
