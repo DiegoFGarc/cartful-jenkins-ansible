@@ -20,7 +20,7 @@ node {
         echo "***********Validating Status***********"
         . ./request.sh
     '''
-        def status = readFile('resultado.txt').trim()
+        def status = readFile('status.txt').trim()
         if (status == '200') {
             echo 'Status 200. Pipeline continue'
         } else {
