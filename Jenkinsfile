@@ -1,10 +1,14 @@
 node {
     
     stage('validate_parameters') {
-        if (env.env_name.contains('ing') || env.env_name.contains('dev')) {
-            echo "The env_name value is valid!: ${env.env_name}"
-        } else {
-            error("The env_name parameter value is invalid. Must be 'ing' or 'dev'.")
+        def valuesText = params.env_name
+        def valuesList = valuesText.split("\n")
+        for (value in valuesList) {
+            if (env.env_name.contains('ing') || env.env_name.contains('dev')) {
+                echo "The env_name value is valid!: ${env.env_name}"
+            } else {
+                error("The env_name parameter value is invalid. Must be 'ing' or 'dev'.")
+            }
         }
     }
 
