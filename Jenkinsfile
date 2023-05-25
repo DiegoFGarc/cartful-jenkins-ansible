@@ -1,7 +1,7 @@
 node {
     
     stage('get_user') {
-        def user = env.USER
+        def user = System.getenv('USER')
         echo "The user running the pipeline is: ${user}"
     }
 
