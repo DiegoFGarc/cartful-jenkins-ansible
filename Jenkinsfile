@@ -1,12 +1,8 @@
 node {
     
-    stage('ger_user') {
-        steps {
-            script {
-                def user = env.USER
-                echo "The user running the pipeline is: ${user}"
-            }
-        }
+    stage('get_user') {
+        def user = env.USER
+        echo "The user running the pipeline is: ${user}"
     }
 
     stage('validate_parameters') {
