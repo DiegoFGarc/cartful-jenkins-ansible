@@ -1,5 +1,14 @@
 node {
     
+    stage('ger_user') {
+        steps {
+            script {
+                def user = env.USER
+                echo "The user running the pipeline is: ${user}"
+            }
+        }
+    }
+
     stage('validate_parameters') {
         def valuesText = params.env_name
         def valuesList = valuesText.split("\n")
