@@ -4,10 +4,10 @@ node {
         def valuesText = params.env_name
         def valuesList = valuesText.split("\n")
         for (value in valuesList) {
-            if (params.env_name.contains('ing') || params.env_name.contains('dev')) {
-                echo "The env_name value is valid!: ${params.env_name}"
+            if (value.contains('ing') || value.contains('dev')) {
+                echo "The env_name value is valid!: ${value}"
             } else {
-                error("The env_name parameter value is invalid. Must be 'ing' or 'dev'.")
+                error("The env_name parameter value is invalid for: ${value}. Must be 'ing' or 'dev'.")
             }
         }
     }
