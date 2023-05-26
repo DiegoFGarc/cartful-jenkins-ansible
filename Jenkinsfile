@@ -34,7 +34,9 @@ node {
 
     stage('send_notification') {
         echo "The variable env_name is: ${env.env_name} and this returns status code 200"
-
+        def build_user = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
+        env.BUILD_USER = build_user.userName
+        echo "The username is: ${env.BUILD_USER}"
     }    
 
 }
